@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: optimal_development
+  pool: 5
+  host: localhost
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: optimal_test
+  pool: 5
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: optimal_production
+  pool: 5
+  host: localhost
+
+cucumber:
+  <<: *test
