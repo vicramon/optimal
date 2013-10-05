@@ -1,1 +1,28 @@
-Hello!
+%h1 
+  Today's Biggest Losers.
+  .criteria
+    Pulled from WSJ Composite List. Criteria: (20 &lt; Price &lt; 100, Lost More than 5%)
+
+%br
+%br
+%table
+  %tr
+    %th.left Name
+    %th Ticker
+    %th Loss Today
+    %th Current Price
+    %th Earnings
+    %th Next Earnings Call
+    %th Chart
+  - @stocks.each do |stock|
+    %tr{ class: cycle('', 'gray') }
+      %td.name= stock.company
+      %td= stock.symbol
+      %td= "#{stock.perc_change}%"
+      %td= "$#{stock.last}"
+      %td
+        = link_to "Quarterly", "http://finance.yahoo.com/q/is?s=#{stock.symbol}"
+        &nbsp;|&nbsp;
+        = link_to "Annual", "http://finance.yahoo.com/q/is?s=#{stock.symbol}&annual"
+      %td= link_to "Call Date", "http://finance.yahoo.com/q?s=#{stock.symbol}"
+      %td= link_to "Chart", "http://finance.yahoo.com/q/bc?s=#{stock.symbol}+Basic+Chart&t=1d"

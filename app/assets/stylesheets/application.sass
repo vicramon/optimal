@@ -5,6 +5,13 @@
 
 body
   background: #eee
+  font-family: Verdana
+  font-size: 14px
+  a, a:active, a:visited
+    text-decoration: none
+  a:hover
+    text-decoration: underline
+
 
 header
   background: #222
@@ -12,8 +19,34 @@ header
   .logo
     padding: 10px 0 0 25px
 
+.criteria
+  display: inline-block
+  font-weight: normal
+
 section#main
   background: white
   margin: 15px 20px
   min-height: 400px
   padding: 20px
+
+  table
+    width: 100%
+    text-align: center
+    border-collapse: collapse
+    tr
+      padding: 15px
+      margin: 15px
+      &.gray
+        background: #eee
+      th
+        &.left
+          text-align: left
+          padding-left: 15px
+      td
+        padding: 15px
+        margin: 15px
+        &.name
+          font-size: 12px
+          text-align: left
+          padding-right: 10px
+          margin-right: 0

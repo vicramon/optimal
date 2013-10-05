@@ -13,6 +13,8 @@ gem 'rails', '4.0.0'
 gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'stock_quote'
+gem 'nokogiri'
 
 group :development do
   gem 'better_errors'
