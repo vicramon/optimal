@@ -1,5 +1,7 @@
-# Optimal
+## Optimal
 
-## Put Option Dashboard
+### Put Options Dashboard
 
-Optimal is a dashboard that pulls down all the relevant info related to specific stocks. This information helps me quickly decide whether or not I want to sell put options for that stock.
+Optimal is a dashboard that pulls down all the relevant info for stocks that are the biggest losers for the day.
+
+This information can help you quickly decide whether or not you want to sell put options for that stock.
