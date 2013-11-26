@@ -25,5 +25,5 @@ class Losers
     symbols.join(', ')
   end
 
-  def url; "http://wsj.com/mdc/public/page/2_3021-losecomp-loser.html"; end
+  def url; "http://online.wsj.com/mdc/public/page/2_3021-losecomp-loser.html"; end
 end

@@ -16,13 +16,13 @@
     %th Chart
   - @stocks.each_with_index do |stock, index|
     %tr{ class: cycle('', 'gray') }
-      %td.name= stock.company
+      %td.name= stock.name
       %td= stock.symbol
-      %td= "#{stock.perc_change}%"
-      %td= "$#{stock.last}"
+      %td= "#{stock.percent_change.to_f}%"
+      %td= "$#{stock.last_trade_price_only}"
       %td
         = link_to "Quarterly", "http://finance.yahoo.com/q/is?s=#{stock.symbol}"
         &nbsp;|&nbsp;
         = link_to "Annual", "http://finance.yahoo.com/q/is?s=#{stock.symbol}&annual"
-      %td= @call_dates[index]
+      %td= @call_dates[index].html_safe
       %td= link_to "Chart", "http://finance.yahoo.com/q/bc?s=#{stock.symbol}+Basic+Chart&t=1d"
