@@ -1,11 +1,15 @@
 class HomeController < ApplicationController
 
   def index
-    loser_list = Losers.new.to_s
-    @stocks = StockList.new(loser_list).stocks
+    @stocks = StockList.new(Losers.new.to_s).stocks
+    @call_dates = fetch_call_dates
+  end
 
+  private
+
+  def fetch_call_dates
     third_friday = ThirdFriday.new(Date.today).find
-    @call_dates = @stocks.map do |stock|
+    @stocks.map do |stock|
       text = CallDate.new(stock.symbol).get_call_date
       if text.present?
         call_date = text.to_date
@@ -15,7 +19,6 @@ class HomeController < ApplicationController
         " - "
       end
     end
-
   end
 
 end
