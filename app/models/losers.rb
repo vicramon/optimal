@@ -1,6 +1,6 @@
 class Losers
-  require 'open-uri'
 
+  require 'open-uri'
   attr_accessor :document
 
   def initialize
@@ -26,4 +26,5 @@ class Losers
   end
 
   def url; "http://online.wsj.com/mdc/public/page/2_3021-losecomp-loser.html"; end
+
 end
