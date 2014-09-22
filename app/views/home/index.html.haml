@@ -19,7 +19,7 @@
       %td.name= stock.name
       %td= stock.symbol
       %td= "#{stock.percent_change.to_f}%"
-      %td= "$#{stock.last_trade_price_only}"
+      %td= number_to_currency stock.last_trade_price_only
       %td
         = link_to "Quarterly", "http://finance.yahoo.com/q/is?s=#{stock.symbol}"
         &nbsp;|&nbsp;
